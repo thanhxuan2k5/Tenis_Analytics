@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push2">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/yolov8n.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_video/output.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/detect/predict-2/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runs/detect/predict/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker_stubs/ball_detections.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker_stubs/player_detections.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yolov8n.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/court_line_detector/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/court_line_detector/court_line_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/court_line_detector/court_line_detector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_video/output.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/output_video/output.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/ball_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/ball_tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/player_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/player_tracker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/thanhxuan2k5/Tenis_Analytics.git",
-    "accountId": "d4df6dca-ddaa-491a-9399-13bc78e96177"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;thanhxuan2k5&quot;
   }
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/thanhxuan2k5/Tenis_Analytics.git&quot;,
+    &quot;accountId&quot;: &quot;d4df6dca-ddaa-491a-9399-13bc78e96177&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -49,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "Python.player_tracker.executor": "Run",
-    "Python.video_utils.executor": "Debug",
-    "Python.yolo_inference.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Tenis_Analysts/model"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.player_tracker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.video_utils.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.yolo_inference.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Tenis_Analysts/model&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Tenis_Analysts\model" />
@@ -189,6 +187,23 @@
       <option name="presentableId" value="Default" />
       <updated>1779414951589</updated>
     </task>
+    <task id="LOCAL-00001" summary="push2">
+      <option name="closed" value="true" />
+      <created>1779691401000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779691401000</updated>
+    </task>
+    <task id="LOCAL-00002" summary="push2">
+      <option name="closed" value="true" />
+      <created>1779691419481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779691419481</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
