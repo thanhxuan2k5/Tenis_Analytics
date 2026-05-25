@@ -17,7 +17,8 @@ class BallTracker:
         df_ball_position = df_ball_position.interpolate()
         df_ball_position = df_ball_position.bfill()
 
-
+        ball_positions = [{1:x} for x in df_ball_position.to_numpy().tolist()]
+        return ball_positions
 
 
     def detect_frames(self,frames, read_from_stub=False, stub_path=None):
