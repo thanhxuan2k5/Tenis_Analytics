@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Tenis_Analysts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input/input_video.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/keypoints_model.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracker/player_tracker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train/tennis_court_keypoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/video_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yolo_inference.py" afterDir="false" />
+    <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push2">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/yolov8n.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_video/output.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs/detect/predict-2/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runs/detect/predict/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker_stubs/ball_detections.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracker_stubs/player_detections.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yolov8n.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/court_line_detector/court_line_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/court_line_detector/court_line_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/ball_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/ball_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/player_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/player_tracker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/thanhxuan2k5/Tenis_Analytics.git",
+    "accountId": "d4df6dca-ddaa-491a-9399-13bc78e96177"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -55,21 +59,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/Tenis_Analysts/model"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Tenis_Analysts\model" />
+      <recent name="D:\Tenis_Analysts\tracker_stubs" />
+      <recent name="D:\Tenis_Analysts\tracker" />
       <recent name="D:\Tenis_Analysts\train" />
       <recent name="D:\Tenis_Analysts\input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Tenis_Analysts\tracker" />
       <recent name="D:\Tenis_Analysts\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.player_tracker">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Tenis_Analysts" />
       <option name="ENV_FILES" value="" />
@@ -160,8 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.player_tracker" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.player_tracker" />
         <item itemvalue="Python.video_utils" />
         <item itemvalue="Python.yolo_inference" />
       </list>
@@ -183,5 +190,9 @@
       <updated>1779414951589</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push2" />
+    <option name="LAST_COMMIT_MESSAGE" value="push2" />
   </component>
 </project>

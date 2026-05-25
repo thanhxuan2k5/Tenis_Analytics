@@ -1,18 +1,34 @@
-import cv2
 from ultralytics import YOLO
 import cv2
-
+import pickle
+import os
 
 class PlayerTracker:
     def __init__(self,model_path):
         self.model = YOLO(model_path)
 
-    def detect_frames(self,frames):
+    def detect_frames(self,frames, read_from_stub=False, stub_path=None):
         player_detections = []
+
+        if read_from_stub and stub_path is not None:
+            if os.path.exists(stub_path):
+                with open(stub_path, 'rb') as f:
+                    player_detections = pickle.load(f)
+                print(f"Đã đọc player_detections từ {stub_path}")
+                return player_detections
+            else:
+                print(f"Cảnh báo: Tệp stub không tồn tại tại {stub_path}. Tiến hành phát hiện.")
 
         for frame in frames:
             player_dict = self.detect_frame(frame)
             player_detections.append(player_dict)
+        
+        if stub_path is not None:
+            os.makedirs(os.path.dirname(stub_path), exist_ok=True)
+            with open(stub_path, 'wb') as f:
+                pickle.dump(player_detections, f)
+            print(f"Đã lưu player_detections vào {stub_path}")
+            
         return player_detections
 
     def detect_frame(self,frame):
@@ -45,4 +61,3 @@ class PlayerTracker:
                 cv2.rectangle(frame,(int(x1),int(y1)),(int(x2),int(y2)),(255,0,0),2)
             output_video_frames.append(frame)
         return output_video_frames
-
