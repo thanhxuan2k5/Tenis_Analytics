@@ -2,14 +2,20 @@ import cv2
 import sys
 
 import numpy as np
+from matplotlib.pyplot import close
 from pyparsing import alphas
+from soupsieve import closest
 
 sys.path.append('../')
 import constants
 from utils import (
     convert_meters_to_pixel_distance,
     convert_pixel_distance_to_meters,
+    get_foot_position,
+    get_closest_keypoint_index, get_height_of_bbox,
+    measure_xy_distances
 )
+
 
 
 class MiniCourt():
@@ -139,6 +145,74 @@ class MiniCourt():
             frame = self.draw_court(frame)
             output_frames.append(frame)
         return output_frames
+
+    def get_start_point_of_mini_court(self):
+        return self.court_start_x, self.court_start_y
+
+    def get_width_of_mini_court(self):
+        return self.court_drawing_width
+
+    def get_court_drawing_keypoint(self):
+        return self.drawing_key_points
+
+    def get_mini_court_coordinates(self,
+                                   object_position,
+                                   closest_key_point,
+                                   closest_key_point_index,
+                                   player_height_in_pixels,
+                                   player_height_in_meters
+                                   ):
+        distance_from_keypoint_x_pixels, distance_from_keypoint_y_pixels = measure_xy_distances(object_position, closest_key_point)
+
+        #convert pixel to meters
+        distance_from_keypoint_x_meters = convert_pixel_distance_to_meters(distance_from_keypoint_x_pixels,
+                                                                           player_height_in_meters,
+                                                                           player_height_in_pixels
+                                                                           )
+        distance_from_keypoint_y_meters = convert_pixel_distance_to_meters(distance_from_keypoint_y_pixels,
+                                                                           player_height_in_meters,
+                                                                           player_height_in_pixels
+                                                                           )
+        #Convert to mini court coordinates
+        mini_court_x_distance_pixels = self.convert_meters_to_pixels(distance_from_keypoint_x_meters)
+        mini_court_y_distance_pixels = self.convert_meters_to_pixels(distance_from_keypoint_y_meters)
+
+        closest_mini_court_keypoint = (self.drawing_key_points[closest_key_point_index*2],
+                                       self.drawing_key_points[closest_key_point_index*2+1]
+                                       )
+        mini_court_player_position = (closest_mini_court_keypoint[0]+mini_court_x_distance_pixels,
+                                        closest_mini_court_keypoint[1]+mini_court_y_distance_pixels
+                                      )
+        return mini_court_player_position
+    def convert_bounding_boxes_to_mini_court_coordinates(self, player_boxes, ball_boxes, original_court_key_points):
+            player_heights = {
+                1: constants.PLAYER_1_HEIGHT_METERS,
+                2: constants.PLAYER_2_HEIGHT_METERS
+            }
+
+            output_player_boxes = []
+            output_ball_boxes = []
+
+            for frame_num, player_box in enumerate(player_boxes):
+                for player_id, bbox in player_box.items():
+                    foot_position = get_foot_position(bbox)
+
+                    #get keypoint in pixel
+                    closest_key_closest_point_index = get_closest_keypoint_index(foot_position, original_court_key_points, [0,2,12,13])
+                    closest_key_point = (original_court_key_points[closest_key_closest_point_index*2], original_court_key_points[closest_key_closest_point_index*2+1])
+                    #get player height in pixels
+                    frame_index_min = max(0, frame_num=20)
+                    frame_index_max = min(len(player_boxes), frame_num+50)
+                    bbxes_heights_in_pixels = [get_height_of_bbox(player_box[i]) for i in range(frame_index_min, frame_index_max)]
+                    max_player_height_in_pixel = max(bbxes_heights_in_pixels)
+
+
+
+
+
+
+
+
 
 
 
