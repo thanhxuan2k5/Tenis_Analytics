@@ -20,30 +20,24 @@ class BallTracker:
         ball_positions = [{1:x} for x in df_ball_position.to_numpy().tolist()]
         return ball_positions
 
-
-    def detect_frames(self,frames, read_from_stub=False, stub_path=None):
+    def detect_frames(self, frames, read_from_stub=False, stub_path=None):
         ball_detections = []
 
         if read_from_stub and stub_path is not None:
-            if os.path.exists(stub_path):
-                with open(stub_path, 'rb') as f:
-                    ball_detections = pickle.load(f)
-                print(f"Đã đọc ball_detections từ {stub_path}")
-                return ball_detections
-            else:
-                print(f"Cảnh báo: Tệp stub không tồn tại tại {stub_path}. Tiến hành phát hiện.")
+            with open(stub_path, 'rb') as f:
+                ball_detections = pickle.load(f)
+            return ball_detections
 
         for frame in frames:
-            ball_dict = self.detect_frame(frame)
-            ball_detections.append(ball_dict)
-        
+            player_dict = self.detect_frame(frame)
+            ball_detections.append(player_dict)
+
         if stub_path is not None:
-            os.makedirs(os.path.dirname(stub_path), exist_ok=True)
             with open(stub_path, 'wb') as f:
                 pickle.dump(ball_detections, f)
-            print(f"Đã lưu ball_detections vào {stub_path}")
-            
+
         return ball_detections
+
 
     def detect_frame(self,frame):
         result = self.model.predict(frame,conf=0.15)[0]
@@ -64,9 +58,9 @@ class BallTracker:
                     (int(bbox[0]), int(bbox[1] - 10)),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     0.9,
-                    (0, 0, 255),
+                    (0, 255, 255),
                     2
                 )
-                cv2.rectangle(frame,(int(x1),int(y1)),(int(x2),int(y2)),(0,0,255),2)
+                cv2.rectangle(frame,(int(x1),int(y1)),(int(x2),int(y2)),(0,255,255),2)
             output_video_frames.append(frame)
         return output_video_frames
