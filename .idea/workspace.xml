@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push2.3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push2.4">
+      <change beforePath="$PROJECT_DIR$/mini_court/mini_court.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_court/mini_court.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/bbox_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/bbox_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779784984161</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="push2.4">
+      <option name="closed" value="true" />
+      <created>1779940927449</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779940927449</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,6 +249,7 @@
     <MESSAGE value="push2.1" />
     <MESSAGE value="push2.2" />
     <MESSAGE value="push2.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="push2.3" />
+    <MESSAGE value="push2.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="push2.4" />
   </component>
 </project>

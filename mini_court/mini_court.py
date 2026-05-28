@@ -6,14 +6,19 @@ from matplotlib.pyplot import close
 from pyparsing import alphas
 from soupsieve import closest
 
+
+
 sys.path.append('../')
 import constants
 from utils import (
     convert_meters_to_pixel_distance,
     convert_pixel_distance_to_meters,
     get_foot_position,
-    get_closest_keypoint_index, get_height_of_bbox,
-    measure_xy_distances
+    get_closest_keypoint_index,
+    get_height_of_bbox,
+    measure_xy_distances,
+    get_center_of_bbox,
+    measure_distances
 )
 
 
@@ -194,6 +199,10 @@ class MiniCourt():
             output_ball_boxes = []
 
             for frame_num, player_box in enumerate(player_boxes):
+                ball_box = ball_boxes[frame_num]
+                ball_position = get_center_of_bbox(ball_box)
+                closest_player_id_to_ball = min(player_box.keys(), key=lambda x: measure_distances(ball_position, get_center_of_bbox(player_box[x])))
+                output_player_bboxes_dict = {}
                 for player_id, bbox in player_box.items():
                     foot_position = get_foot_position(bbox)
 
@@ -205,6 +214,25 @@ class MiniCourt():
                     frame_index_max = min(len(player_boxes), frame_num+50)
                     bbxes_heights_in_pixels = [get_height_of_bbox(player_box[i]) for i in range(frame_index_min, frame_index_max)]
                     max_player_height_in_pixel = max(bbxes_heights_in_pixels)
+
+                    mini_court_player_position = self.get_mini_court_coordinates(foot_position,
+                                                                                 closest_key_point,
+                                                                                 get_closest_keypoint_index,
+                                                                                 max_player_height_in_pixel,
+                                                                                 player_heights[player_id]
+                                                                                 )
+
+                    output_player_bboxes_dict[player_id] = mini_court_player_position
+                if closest_player_id_to_ball == player_id:
+                    closest_key_closest_point_index = get_closest_keypoint_index(ball_position,original_court_key_points,[0, 2, 12, 13])
+                    closest_key_point = (original_court_key_points[closest_key_closest_point_index * 2],
+                                         original_court_key_points[closest_key_closest_point_index * 2 + 1])
+
+                    mini_court_player_position = self.get_mini_court_coordinates(ball_position,
+                                                                                 closest_key_point,
+                                                                                 max_player_height_in_pixel,
+                                                                                 player_heights[player_id]
+                                                                                 )
 
 
 
