@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push2.4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/ball_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/ball_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/court_line_detector/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/court_line_detector/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/court_line_detector/court_line_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/court_line_detector/court_line_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini_court/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_court/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mini_court/mini_court.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_court/mini_court.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/ball_tracker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracker/player_tracker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train/tennis_court_keypoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/bbox_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/bbox_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/conversions.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/conversions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/video_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/video_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolo_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_inference.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +85,7 @@
       <recent name="D:\Tenis_Analysts\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.yolo_inference">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Tenis_Analysts" />
       <option name="ENV_FILES" value="" />
@@ -163,10 +176,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.yolo_inference" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.player_tracker" />
         <item itemvalue="Python.video_utils" />
-        <item itemvalue="Python.yolo_inference" />
       </list>
     </recent_temporary>
   </component>
