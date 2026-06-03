@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b2d4727a-77b1-4ef0-bc7a-b9a68fba2913" name="Changes" comment="push2.4">
+      <change beforePath="$PROJECT_DIR$/mini_court/mini_court.py" beforeDir="false" afterPath="$PROJECT_DIR$/mini_court/mini_court.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/bbox_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/bbox_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.live.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.player_tracker.executor&quot;: &quot;Run&quot;,
     &quot;Python.video_utils.executor&quot;: &quot;Debug&quot;,
@@ -72,28 +73,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="live" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Tenis_Analysts" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/live.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Tenis_Analysts" />
       <option name="ENV_FILES" value="" />
@@ -185,10 +164,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.live" />
-        <item itemvalue="Python.yolo_inference" />
         <item itemvalue="Python.player_tracker" />
         <item itemvalue="Python.video_utils" />
+        <item itemvalue="Python.yolo_inference" />
       </list>
     </recent_temporary>
   </component>
@@ -263,31 +241,7 @@
       <option name="project" value="LOCAL" />
       <updated>1779940927449</updated>
     </task>
-    <task id="LOCAL-00008" summary="push3">
-      <option name="closed" value="true" />
-      <created>1780158570582</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1780158570582</updated>
-    </task>
-    <task id="LOCAL-00009" summary="push4">
-      <option name="closed" value="true" />
-      <created>1780386076970</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1780386076970</updated>
-    </task>
-    <task id="LOCAL-00010" summary="push4">
-      <option name="closed" value="true" />
-      <created>1780386203476</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1780386203476</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -296,8 +250,6 @@
     <MESSAGE value="push2.2" />
     <MESSAGE value="push2.3" />
     <MESSAGE value="push2.4" />
-    <MESSAGE value="push3" />
-    <MESSAGE value="push4" />
-    <option name="LAST_COMMIT_MESSAGE" value="push4" />
+    <option name="LAST_COMMIT_MESSAGE" value="push2.4" />
   </component>
 </project>
