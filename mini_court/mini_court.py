@@ -196,8 +196,25 @@ class MiniCourt():
         output_ball_boxes= []
 
         for frame_num, player_bbox in enumerate(player_boxes):
-            ball_box = ball_boxes[frame_num][1]
-            ball_position = get_center_of_bbox(ball_box)
+            # Safely retrieve ball_box for current frame
+            ball_box = None
+            if frame_num < len(ball_boxes) and isinstance(ball_boxes[frame_num], dict):
+                ball_box = ball_boxes[frame_num].get(1)
+            if ball_box is None:
+                ball_position = (0, 0)
+            else:
+                ball_position = get_center_of_bbox(ball_box)
+
+            # Skip frames where no players were detected
+            if len(player_bbox) == 0:
+                output_player_boxes.append({})
+                # Carry forward the last known ball position, or use a placeholder
+                if output_ball_boxes:
+                    output_ball_boxes.append(output_ball_boxes[-1])
+                else:
+                    output_ball_boxes.append({1: (0, 0)})
+                continue
+
             closest_player_id_to_ball = min(player_bbox.keys(), key=lambda x: measure_distance(ball_position, get_center_of_bbox(player_bbox[x])))
 
             output_player_bboxes_dict = {}
@@ -213,6 +230,8 @@ class MiniCourt():
                 frame_index_min = max(0, frame_num-20)
                 frame_index_max = min(len(player_boxes), frame_num+50)
                 bboxes_heights_in_pixels = [get_height_of_bbox(player_boxes[i][player_id]) for i in range(frame_index_min, frame_index_max) if player_id in player_boxes[i]]
+                if not bboxes_heights_in_pixels:
+                    continue
                 max_player_height_in_pixels = max(bboxes_heights_in_pixels)
 
                 mini_court_player_position = self.get_mini_court_coordinates(foot_position,
@@ -238,11 +257,21 @@ class MiniCourt():
                                                                             )
                     output_ball_boxes.append({1:mini_court_player_position})
             output_player_boxes.append(output_player_bboxes_dict)
+            # If no ball box was appended for this frame (player loop didn't match), carry forward
+            if len(output_ball_boxes) < frame_num + 1:
+                if output_ball_boxes:
+                    output_ball_boxes.append(output_ball_boxes[-1])
+                else:
+                    output_ball_boxes.append({1: (0, 0)})
 
         return output_player_boxes , output_ball_boxes
     
     def draw_points_on_mini_court(self,frames,postions, color=(0,255,0)):
         for frame_num, frame in enumerate(frames):
+            if frame_num >= len(postions):
+                break
+            if not postions[frame_num]:
+                continue
             for _, position in postions[frame_num].items():
                 x,y = position
                 x= int(x)
