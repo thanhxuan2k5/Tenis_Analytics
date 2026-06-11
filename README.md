@@ -21,10 +21,9 @@ Tenis_Analysts là một hệ thống phân tích video tennis tự động, đ�
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your_username/Tenis_Analysts.git
+git clone https://github.com/thanhxuan2k5/Tenis_Analytics.git
 cd Tenis_Analysts
-```
-*(Lưu ý: Thay `https://github.com/your_username/Tenis_Analysts.git` bằng URL repository thực tế của bạn)*
+
 
 ### 2. Tạo và kích hoạt môi trường ảo (khuyến nghị)
 ```bash
